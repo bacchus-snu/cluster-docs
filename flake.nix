@@ -20,7 +20,7 @@
       {
         packages = {
           default = pkgs.stdenvNoCC.mkDerivation {
-            name = "waiter-docs";
+            name = "cluster-docs";
             src = ./.;
 
             nativeBuildInputs = with pkgs; [
@@ -59,7 +59,7 @@
               '';
             in
             pkgs.dockerTools.buildLayeredImage {
-              name = "waiter-docs";
+              name = "cluster-docs";
               config = {
                 User = "1000";
                 Cmd = [
